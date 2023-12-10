@@ -1,13 +1,22 @@
 All Rights Reserved
 
-Copyright (c) ${project.inceptionYear} ${owner}
+The following terms and conditions govern your use of the software and any associated documentation files (the "Software") available on this GitHub repository. The Software is protected by copyright law and is owned by the copyright holders. Any use of the Software is subject to the terms below:
 
-Created by Techcable
+1. **License Grant:** The copyright holders hereby grant you a limited, non-exclusive, non-transferable license to use the Software solely for your personal, non-commercial purposes.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+2. **Restrictions:** You may not, without the express written permission of the copyright holders:
+   - Copy, modify, or distribute the Software.
+   - Reverse engineer, decompile, or disassemble the Software.
+   - Use the Software for any commercial purpose or in any commercial product.
+
+3. **Ownership:** The copyright holders retain all right, title, and interest in and to the Software. This license does not grant you any rights to patents, copyrights, trade secrets, trademarks, or any other rights in respect to the Software.
+
+4. **Termination:** This license is effective until terminated. The license will terminate automatically without notice if you breach any of its terms. Upon termination, you must destroy all copies of the Software.
+
+5. **No Warranty:** The Software is provided "as is," without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the Software or the use or other dealings in the Software.
+
+6. **Contact:** For inquiries regarding this license, please contact the copyright holders at [contact@email.com].
+
+By using the Software, you agree to be bound by the terms and conditions of this license.
+
+**Copyright (c) 2023 Rabia Patel Art development team [William Chalifoux, Dahlia James, Paul James, Henna Chung]**
