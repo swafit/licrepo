@@ -22,3 +22,9 @@ jobs:
           
           # Display the size in the GitHub Actions logs
           echo "Repository size is $size"
+          
+      - name: Publish repository size as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: repository-size
+          path: repository_size.txt
