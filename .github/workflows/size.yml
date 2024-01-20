@@ -27,6 +27,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+          
       - name: Update README
         run: |
           echo "[![Repository Size](https://img.shields.io/badge/Repository%20Size-${{ needs.repo_size.outputs.size }}-blue)](https://github.com/swafit/licerepo)" > README.md
