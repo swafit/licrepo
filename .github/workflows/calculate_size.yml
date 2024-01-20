@@ -1,0 +1,21 @@
+name: Calculate Repository Size
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name
+
+jobs:
+  calculate_size:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Calculate repository size
+        id: calculate_size
+        run: |
+          size=$(du -sh | awk '{print $1}')
+          echo "Repository size is $size"
+          echo "::set-output name=size::$size"
