@@ -18,13 +18,13 @@ jobs:
         run: |
           size=$(du -sh | awk '{print $1}')
           echo "Repository size is $size"
-          echo $size > repository_size.txt
+          echo $size > repository-size.txt
           
           # Display the size in the GitHub Actions logs
           echo "Repository size is $size"
           
       - name: Publish repository size as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: repository-size
           path: repository-size.txt
