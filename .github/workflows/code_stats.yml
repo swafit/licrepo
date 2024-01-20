@@ -24,4 +24,4 @@ jobs:
           echo "::set-output name=stats::$stats"
 
       - name: Display code statistics
-        run: echo "Code Statistics: ${{ steps.code_stats.outputs.stats }}"
+        run: echo "Code Statistics-> ${{ steps.code_stats.outputs.stats }}"
