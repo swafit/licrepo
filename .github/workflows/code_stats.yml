@@ -1,0 +1,27 @@
+name: Code Stats
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name
+
+jobs:
+  code_stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Tokei
+        run: |
+          cargo install tokei
+
+      - name: Count lines of code
+        id: code_stats
+        run: |
+          stats=$(tokei)
+          echo "::set-output name=stats::$stats"
+
+      - name: Display code statistics
+        run: echo "Code Statistics: ${{ steps.code_stats.outputs.stats }}"
