@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Calculate repository size
         id: size
@@ -19,16 +19,8 @@ jobs:
           size=$(du -sh | awk '{print $1}')
           echo "::set-output name=size::$size"
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-
-      - name: Install requirements
-        run: pip install -r requirements.txt
-
       - name: Display repository size
-        run: echo "Repository Size: ${{ steps.size.outputs.size }}"
+        run: echo "Repository Size ${{ steps.size.outputs.size }}"
 
   update_readme:
     needs: repo_size
@@ -36,4 +28,4 @@ jobs:
 
     steps:
       - name: Update README
-        run: echo "[![Repository Size](https://img.shields.io/badge/Repository%20Size-${{ needs.repo_size.outputs.size }}-blue)](https://github.com/your-username/your-repository)"
+        run: echo "[![Repository Size](https://img.shields.io/badge/Repository%20Size-${{ needs.repo_size.outputs.size }}-blue)](https://github.com/swafit/licrepo)"
