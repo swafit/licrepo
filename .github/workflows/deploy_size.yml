@@ -1,0 +1,20 @@
+name: Deploy Repository Size
+
+on:
+  workflow_run:
+    workflows: ["Calculate Repository Size"]
+    types:
+      - completed
+
+jobs:
+  deploy_size:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Deploy size to GitHub Pages
+        run: |
+          mkdir -p docs
+          cp ${{ github.workspace }}/repository_size.txt docs/index.html
