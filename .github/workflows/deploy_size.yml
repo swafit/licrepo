@@ -17,4 +17,4 @@ jobs:
       - name: Deploy size to GitHub Pages
         run: |
           mkdir -p docs
-          cp ${{ github.workspace }}/repository-size.txt docs/index.html
+          cp ${{ github.workspace }}/repository-size.txt docs/
