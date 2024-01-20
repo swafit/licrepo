@@ -18,4 +18,7 @@ jobs:
         run: |
           size=$(du -sh | awk '{print $1}')
           echo "Repository size is $size"
-          echo "::set-output name=size::$size"
+          echo $size > repository_size.txt
+          
+          # Display the size in the GitHub Actions logs
+          echo "Repository size is $size"
