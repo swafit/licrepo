@@ -1,0 +1,39 @@
+name: Repository Size
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name
+
+jobs:
+  repo_size:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Calculate repository size
+        id: size
+        run: |
+          size=$(du -sh | awk '{print $1}')
+          echo "::set-output name=size::$size"
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install requirements
+        run: pip install -r requirements.txt
+
+      - name: Display repository size
+        run: echo "Repository Size: ${{ steps.size.outputs.size }}"
+
+  update_readme:
+    needs: repo_size
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Update README
+        run: echo "[![Repository Size](https://img.shields.io/badge/Repository%20Size-${{ needs.repo_size.outputs.size }}-blue)](https://github.com/your-username/your-repository)"
